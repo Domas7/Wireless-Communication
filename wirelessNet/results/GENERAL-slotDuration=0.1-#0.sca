@@ -1,0 +1,1691 @@
+version 3
+run GENERAL-9-20231030-14:52:13-2332
+attr configname GENERAL
+attr datetime 20231030-14:52:13
+attr datetimef 20231030-145213
+attr experiment GENERAL
+attr inifile omnetpp.ini
+attr iterationvars $slotDuration=0.1
+attr iterationvarsd slotDuration=0.1
+attr iterationvarsf slotDuration=0.1-
+attr measurement $slotDuration=0.1
+attr network topology
+attr processid 2332
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 9
+attr seedset 9
+itervar slotDuration 0.1
+config image-path ../inet4.5/images
+config network topology
+config **.vector-recording false
+config **.packetReceived:count.scalar-recording true
+config **.residualEnergyCapacity:last.scalar-recording true
+config **.scalar-recording false
+config **.param-recording false
+config sim-time-limit 100s
+config **.wlan[*].typename WirelessInterface
+config **.wlan[*].radio.typename ApskScalarRadio
+config **.arp.typename GlobalArp
+config *.gateway.forwarding true
+config **.maxTransmissionDuration 100ms
+config *.configurator.addStaticRoutes true
+config **.radio.centerFrequency 2.45GHz
+config **.radio.bandwidth 2.8MHz
+config **.radio.transmitter.bitrate "19200 bps"
+config **.radio.transmitter.headerLength 8b
+config **.radio.transmitter.preambleDuration 0.0001s
+config **.radio.transmitter.power 2.24mW
+config **.radio.receiver.energyDetection -90dBm
+config **.radio.receiver.sensitivity -100dBm
+config **.radio.receiver.snirThreshold -8dB
+config *.radioMedium.backgroundNoise.power -110dBm
+config **.wlan[*].mac.headerLength 8b
+config *.sensor*.numApps 1
+config *.sensor*.app[0].typename UdpBasicApp
+config *.sensor*.app[0].destAddresses "\"server\""
+config *.sensor*.app[0].destPort 1000
+config *.sensor*.app[0].sendInterval 1s
+config *.sensor*.app[0].startTime exponential(1s)
+config *.sensor*.app[0].messageLength 10Byte
+config *.server.numApps 1
+config *.server.app[0].typename UdpSink
+config *.server.app[0].localPort 1000
+config *.visualizer.*.routingTableVisualizer.displayRoutingTables false
+config *.visualizer.*.routingTableVisualizer.displayRoutesIndividually false
+config *.visualizer.*.routingTableVisualizer.lineShift 0
+config *.visualizer.*.routingTableVisualizer.displayLabels false
+config *.visualizer.*.infoVisualizer.modules "\"*.server.app[0]\""
+config *.visualizer.*.infoVisualizer.format "\"%t\""
+config *.visualizer.*.networkRouteVisualizer.displayRoutes true
+config *.visualizer.*.physicalLinkVisualizer.displayLinks true
+config **.wlan[*].mac.typename LMac
+config **.mac.slotDuration 0.1s
+config **.mac.numSlots 8
+config **.mac.reservedMobileSlots 0
+config **.wlan[*].queue.typename DropTailQueue
+config **.wlan[*].queue.packetCapacity 10
+
+scalar topology.sensor0.energyStorage residualEnergyCapacity:last -0.031002042032303
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor0.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor0.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor1.energyStorage residualEnergyCapacity:last -0.030988287821874
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor1.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor1.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor2.energyStorage residualEnergyCapacity:last -0.031031809104793
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor2.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor2.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor3.energyStorage residualEnergyCapacity:last -0.031073266272146
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor3.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor3.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor4.energyStorage residualEnergyCapacity:last -0.032284605751931
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor4.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor4.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor5.energyStorage residualEnergyCapacity:last -0.030795571078343
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor5.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor5.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor6.energyStorage residualEnergyCapacity:last -0.03091894561388
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor6.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor6.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor7.energyStorage residualEnergyCapacity:last -0.030878448003423
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor7.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor7.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor8.energyStorage residualEnergyCapacity:last -0.031014197477107
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor8.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor8.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor9.energyStorage residualEnergyCapacity:last -0.0304917445735
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor9.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor9.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor10.energyStorage residualEnergyCapacity:last -0.030683920922696
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor10.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor10.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor11.energyStorage residualEnergyCapacity:last -0.030686023104669
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor11.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor11.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor12.energyStorage residualEnergyCapacity:last -0.030859458881329
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor12.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor12.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor13.energyStorage residualEnergyCapacity:last -0.030880259809122
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor13.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor13.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor14.energyStorage residualEnergyCapacity:last -0.030378669468173
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor14.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor14.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor15.energyStorage residualEnergyCapacity:last -0.030616490798699
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor15.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor15.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor16.energyStorage residualEnergyCapacity:last -0.03106004001462
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor16.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor16.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor17.energyStorage residualEnergyCapacity:last -0.031320117562203
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor17.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor17.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor18.energyStorage residualEnergyCapacity:last -0.030987505854517
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor18.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor18.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor19.energyStorage residualEnergyCapacity:last -0.030637863809141
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor19.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor19.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor20.energyStorage residualEnergyCapacity:last -0.030926673699929
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor20.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor20.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor21.energyStorage residualEnergyCapacity:last -0.031122072741801
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor21.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor21.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor22.energyStorage residualEnergyCapacity:last -0.030846485819013
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor22.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor22.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor23.energyStorage residualEnergyCapacity:last -0.030941289813343
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor23.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor23.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor24.energyStorage residualEnergyCapacity:last -0.032343478495551
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor24.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor24.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor25.energyStorage residualEnergyCapacity:last -0.031000342528257
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor25.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor25.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor26.energyStorage residualEnergyCapacity:last -0.030926288603684
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor26.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor26.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor27.energyStorage residualEnergyCapacity:last -0.030996225919331
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor27.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor27.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor28.energyStorage residualEnergyCapacity:last -0.031146224083078
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor28.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor28.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor29.energyStorage residualEnergyCapacity:last -0.030834328374154
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor29.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor29.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor30.energyStorage residualEnergyCapacity:last -0.031045081167843
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor30.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor30.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor31.energyStorage residualEnergyCapacity:last -0.031082963928026
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor31.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor31.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor32.energyStorage residualEnergyCapacity:last -0.030701800759549
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor32.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor32.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor33.energyStorage residualEnergyCapacity:last -0.030749523569332
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor33.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor33.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor34.energyStorage residualEnergyCapacity:last -0.031240385334661
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor34.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor34.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor35.energyStorage residualEnergyCapacity:last -0.030864111501254
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor35.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor35.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor36.energyStorage residualEnergyCapacity:last -0.030703956345066
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor36.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor36.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor37.energyStorage residualEnergyCapacity:last -0.03086801468846
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor37.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor37.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor38.energyStorage residualEnergyCapacity:last -0.031057012691292
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor38.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor38.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor39.energyStorage residualEnergyCapacity:last -0.030689684095753
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor39.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor39.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor40.energyStorage residualEnergyCapacity:last -0.030532132799171
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor40.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor40.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor41.energyStorage residualEnergyCapacity:last -0.030677837367856
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor41.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor41.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor42.energyStorage residualEnergyCapacity:last -0.031262834275151
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor42.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor42.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor43.energyStorage residualEnergyCapacity:last -0.030669394017327
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor43.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor43.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor44.energyStorage residualEnergyCapacity:last -0.03092421086812
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor44.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor44.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor45.energyStorage residualEnergyCapacity:last -0.031264410706671
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor45.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor45.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor46.energyStorage residualEnergyCapacity:last -0.030781339237466
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor46.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor46.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor47.energyStorage residualEnergyCapacity:last -0.032261811658017
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor47.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor47.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor48.energyStorage residualEnergyCapacity:last -0.031159974612765
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor48.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor48.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor49.energyStorage residualEnergyCapacity:last -0.030919358704679
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor49.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor49.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor50.energyStorage residualEnergyCapacity:last -0.030605069764625
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor50.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor50.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor51.energyStorage residualEnergyCapacity:last -0.031013154391361
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor51.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor51.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor52.energyStorage residualEnergyCapacity:last -0.030950377646534
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor52.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor52.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor53.energyStorage residualEnergyCapacity:last -0.030534439212881
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor53.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor53.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor54.energyStorage residualEnergyCapacity:last -0.030803981428459
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor54.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor54.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor55.energyStorage residualEnergyCapacity:last -0.032216383283438
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor55.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor55.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor56.energyStorage residualEnergyCapacity:last -0.030808506472914
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor56.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor56.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor57.energyStorage residualEnergyCapacity:last -0.030379398739763
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor57.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor57.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor58.energyStorage residualEnergyCapacity:last -0.031147644989978
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor58.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor58.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor59.energyStorage residualEnergyCapacity:last -0.030732586731221
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor59.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor59.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor60.energyStorage residualEnergyCapacity:last -0.030739313447646
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor60.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor60.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor61.energyStorage residualEnergyCapacity:last -0.030868746706663
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor61.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor61.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor62.energyStorage residualEnergyCapacity:last -0.030632380956357
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor62.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor62.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor63.energyStorage residualEnergyCapacity:last -0.030632505182789
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor63.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor63.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor64.energyStorage residualEnergyCapacity:last -0.031346548950267
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor64.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor64.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor65.energyStorage residualEnergyCapacity:last -0.030694530867374
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor65.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor65.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor66.energyStorage residualEnergyCapacity:last -0.032196869824538
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor66.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor66.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor67.energyStorage residualEnergyCapacity:last -0.030851187404321
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor67.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor67.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor68.energyStorage residualEnergyCapacity:last -0.031085830747799
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor68.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor68.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor69.energyStorage residualEnergyCapacity:last -0.030980710627873
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor69.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor69.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor70.energyStorage residualEnergyCapacity:last -0.03070678968222
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor70.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor70.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor71.energyStorage residualEnergyCapacity:last -0.030501321572117
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor71.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor71.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor72.energyStorage residualEnergyCapacity:last -0.03056923144374
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor72.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor72.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor73.energyStorage residualEnergyCapacity:last -0.031966758246874
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor73.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor73.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor74.energyStorage residualEnergyCapacity:last -0.03081343569905
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor74.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor74.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor75.energyStorage residualEnergyCapacity:last -0.032254496655836
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor75.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor75.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor76.energyStorage residualEnergyCapacity:last -0.030897405764842
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor76.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor76.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor77.energyStorage residualEnergyCapacity:last -0.031330529796612
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor77.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor77.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor78.energyStorage residualEnergyCapacity:last -0.030467088398275
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor78.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor78.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor79.energyStorage residualEnergyCapacity:last -0.030869058943322
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor79.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor79.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor80.energyStorage residualEnergyCapacity:last -0.03109880979827
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor80.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor80.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor81.energyStorage residualEnergyCapacity:last -0.030755354963192
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor81.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor81.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor82.energyStorage residualEnergyCapacity:last -0.030619759806986
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor82.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor82.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor83.energyStorage residualEnergyCapacity:last -0.031068860611943
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor83.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor83.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor84.energyStorage residualEnergyCapacity:last -0.031090094840613
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor84.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor84.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor85.energyStorage residualEnergyCapacity:last -0.03104203224845
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor85.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor85.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor86.energyStorage residualEnergyCapacity:last -0.030762433699448
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor86.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor86.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor87.energyStorage residualEnergyCapacity:last -0.030615089538343
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor87.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor87.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor88.energyStorage residualEnergyCapacity:last -0.030829680463915
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor88.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor88.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor89.energyStorage residualEnergyCapacity:last -0.030758316459197
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor89.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor89.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor90.energyStorage residualEnergyCapacity:last -0.031321579571853
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor90.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor90.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor91.energyStorage residualEnergyCapacity:last -0.030941068548642
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor91.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor91.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor92.energyStorage residualEnergyCapacity:last -0.030710970525963
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor92.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor92.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor93.energyStorage residualEnergyCapacity:last -0.030766973939516
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor93.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor93.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor94.energyStorage residualEnergyCapacity:last -0.030503670335351
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor94.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor94.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor95.energyStorage residualEnergyCapacity:last -0.030892043922355
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor95.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor95.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor96.energyStorage residualEnergyCapacity:last -0.030613615578865
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor96.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor96.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor97.energyStorage residualEnergyCapacity:last -0.030969643506413
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor97.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor97.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor98.energyStorage residualEnergyCapacity:last -0.030543232941869
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor98.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor98.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor99.energyStorage residualEnergyCapacity:last -0.030924542318786
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.sensor99.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.sensor99.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.gateway.energyStorage residualEnergyCapacity:last -0.030713672401331
+attr interpolationmode linear
+attr recordingmode last
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, last"
+attr unit J
+scalar topology.gateway.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.server.udp packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+scalar topology.server.app[0] packetReceived:count 0
+attr interpolationmode none
+attr recordingmode count
+attr source packetReceived
+attr title "packets received, count"
+
