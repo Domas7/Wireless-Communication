@@ -1,0 +1,14 @@
+% Define the vertices of the polygon
+polygonVertices = [1, 1; 1, 5; 5, 5; 5, 1];
+polygonVertices1 = [5, 5; 5,6; 6,5; 6, 6];
+disp(polygonVertices1)
+poly=[polygonVertices1; polygonVertices];
+% Define the two points of the line segment
+point1 = [7,8];
+point2 = [2,2];
+disp("start")
+% Check if any point on the line segment is inside the polygon
+
+[in, dist]=distInRegion(point1,point2,poly(:i));
+disp(in)
+disp(dist)
